@@ -9,6 +9,7 @@
 #include "ConnectionManager.h"
 #include <iostream>
 #include <sstream>
+#include <stdlib.h>
 
 ConnectionManager::ConnectionManager() {
 	curl = curl_easy_init();
