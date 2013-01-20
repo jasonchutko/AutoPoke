@@ -94,12 +94,14 @@ void ConnectionManager::loadPokeData() {
 	long http_code = 0;
 	curl_easy_getinfo (curl, CURLINFO_RESPONSE_CODE, &http_code);
 
-	if (http_code != 200 || res == CURLE_ABORTED_BY_CALLBACK)
-	{
-		// user is no longer logged in, so force a quit
-		std::cout << "User has been logged out. Please run again." << std::endl;
-		abort();
-	}
+
+	// TODO: fix the following code
+	// if (http_code != 200 || res == CURLE_ABORTED_BY_CALLBACK)
+	// {
+	// 	// user is no longer logged in, so force a quit
+	// 	std::cout << "User has been logged out. Please run again." << std::endl;
+	// 	abort();
+	// }
 }
 
 void ConnectionManager::pokeUser(std::string url) {
